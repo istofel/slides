@@ -155,4 +155,4 @@ O script aponta **ERROS**, **AVISOS** e os lotes de publicação:
 
 ## Licença
 
-[Defina a licença do repositório, por exemplo MIT.]
+Distribuída sob a licença [MIT](LICENSE). © 2026 Vinícius Istofel Oliveira.
