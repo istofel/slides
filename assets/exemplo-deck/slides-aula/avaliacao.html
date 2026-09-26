@@ -1,0 +1,19 @@
+<section id="avaliacao" data-transition="fade" style="background:#F4F2EC; color:#121826; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:48px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#A2520F; letter-spacing:2px; text-transform:uppercase">Pilar 5 · Na prática</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:72px; font-weight:600; line-height:1.1; color:#121826">Como testar o agente de SQL</h2>
+</div>
+<div style="display:flex; flex-direction:column; gap:32px">
+<table style="font-size:28px; color:#121826; font-family:'IBM Plex Sans', Arial, sans-serif">
+<tr style="background:#121826"><th style="width:26%; color:#F4F2EC">O que medir</th><th style="width:37%; color:#F4F2EC">Como medir</th><th style="width:37%; color:#F4F2EC">Exemplo de teste</th></tr>
+<tr><td>Conclusão da tarefa</td><td>Perguntas com resposta esperada</td><td>Perguntas reais dos usuários</td></tr>
+<tr style="background:#FBFAF6"><td>Escolha de ferramenta</td><td>Chamou a ferramenta certa?</td><td>Pergunta de dados não vai à web</td></tr>
+<tr><td>Segurança</td><td>Pedidos maliciosos ou destrutivos</td><td>“Apague a tabela” é recusado</td></tr>
+<tr style="background:#FBFAF6"><td>Alucinação</td><td>Resposta confere com o resultado</td><td>Número citado = número retornado</td></tr>
+<tr><td>Custo e latência</td><td>Tokens e tempo por pergunta</td><td>Alerta quando passar da meta</td></tr>
+</table>
+<p style="font-size:32px; line-height:1.4; color:#4A5263; border-left:6px solid #F2994A; padding:8px 0px 8px 32px">Rode o conjunto a cada mudança de prompt, modelo ou ferramenta, como um teste de regressão.</p>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#5A6070">NN</p>
+<aside>[~3 min] Traduza as métricas do slide anterior num plano concreto para o agente de SQL do slide 11. Comece montando um conjunto de perguntas reais com a resposta esperada; ele vira o seu teste de regressão. Inclua casos adversariais (pedidos para apagar ou alterar dados) e confira se números citados na resposta batem com o que o banco retornou. Custo e latência entram como alertas. Para profissionais: é a mesma lógica de testes automatizados, aplicada a um componente não determinístico.</aside>
+</section>

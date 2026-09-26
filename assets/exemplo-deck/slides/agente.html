@@ -1,0 +1,28 @@
+<section id="agente" data-transition="fade" style="background:#F4F2EC; color:#121826; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:48px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#A2520F; letter-spacing:2px; text-transform:uppercase">Conceito</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:72px; font-weight:600; line-height:1.1; color:#121826">O que é um agente de IA?</h2>
+</div>
+<div style="display:flex; align-items:center; gap:64px">
+<div style="width:640px; display:flex; flex-direction:column; gap:40px">
+<p style="font-size:32px; line-height:1.4; color:#4A5263">Um sistema em que o LLM decide, passo a passo, qual ação tomar e executa essa ação com ferramentas reais até cumprir um objetivo.</p>
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-size:32px; color:#4A5263"><b>Chatbot:</b> responde a uma pergunta.</p>
+<p style="font-size:32px; color:#A2520F"><b>Agente:</b> age até cumprir a tarefa.</p>
+</div>
+</div>
+<div style="position:relative; width:960px; height:560px">
+<div style="position:absolute; left:320px; top:0px; width:320px; height:160px; background:#FBFAF6; border:3px solid #F2994A; border-radius:20px; padding:24px; display:flex; flex-direction:column; justify-content:center; gap:4px"><h3 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:32px; font-weight:600; color:#121826">Raciocinar</h3><p style="font-size:24px; color:#4A5263">O LLM decide a próxima ação</p></div>
+<div style="position:absolute; left:640px; top:200px; width:320px; height:160px; background:#FBFAF6; border:2px solid #DEDAD0; border-radius:20px; padding:24px; display:flex; flex-direction:column; justify-content:center; gap:4px"><h3 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:32px; font-weight:600; color:#121826">Agir</h3><p style="font-size:24px; color:#4A5263">Chama uma ferramenta ou API</p></div>
+<div style="position:absolute; left:320px; top:400px; width:320px; height:160px; background:#FBFAF6; border:2px solid #DEDAD0; border-radius:20px; padding:24px; display:flex; flex-direction:column; justify-content:center; gap:4px"><h3 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:32px; font-weight:600; color:#121826">Observar</h3><p style="font-size:24px; color:#4A5263">Lê o resultado da ação</p></div>
+<div style="position:absolute; left:0px; top:200px; width:320px; height:160px; background:#FBFAF6; border:2px solid #DEDAD0; border-radius:20px; padding:24px; display:flex; flex-direction:column; justify-content:center; gap:4px"><h3 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:32px; font-weight:600; color:#121826">Atualizar</h3><p style="font-size:24px; color:#4A5263">Guarda contexto e estado</p></div>
+<x-connector x1="640" y1="80" x2="800" y2="200" route="hv" style="color:#5A6070; border-width:3px"></x-connector>
+<x-connector x1="800" y1="360" x2="640" y2="480" route="vh" style="color:#5A6070; border-width:3px"></x-connector>
+<x-connector x1="320" y1="480" x2="160" y2="360" route="hv" style="color:#5A6070; border-width:3px"></x-connector>
+<x-connector x1="160" y1="200" x2="320" y2="80" route="vh" style="color:#5A6070; border-width:3px"></x-connector>
+<p style="position:absolute; left:320px; top:262px; width:320px; text-align:center; font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#5A6070">repete até concluir</p>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#5A6070">04</p>
+<aside>Slide extra para nivelar a turma antes dos pilares. O agente funciona em ciclo: o modelo raciocina sobre o objetivo, escolhe uma ação (uma ferramenta, uma API), observa o resultado e atualiza seu contexto, repetindo até concluir. Exemplo: "descubra quantos alunos se matricularam este semestre" leva o agente a gerar SQL, executar no banco, ler o resultado e responder.</aside>
+</section>

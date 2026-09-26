@@ -1,0 +1,22 @@
+<section id="toolcalling" data-transition="fade" style="background:#F4F2EC; color:#121826; font-family:'IBM Plex Sans', Arial, sans-serif; padding:128px 128px 160px; display:flex; flex-direction:column; gap:48px">
+<div style="display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#A2520F; letter-spacing:2px; text-transform:uppercase">Pilar 2 · Na prática</p>
+<h2 style="font-family:'Space Grotesk', Arial, sans-serif; font-size:72px; font-weight:600; line-height:1.1; color:#121826">Tool calling na prática</h2>
+</div>
+<div style="display:flex; gap:48px; align-items:center">
+<div style="flex:1; display:flex; flex-direction:column; gap:16px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#5A6070; letter-spacing:2px; text-transform:uppercase">Resposta do modelo</p>
+<div style="background:#121826; border-radius:20px; padding:40px 48px">
+<p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:28px; line-height:1.6; color:#E6E1D6">{ "type": <span style="color:#F2994A">"tool_use"</span>,<br>&#160;&#160;"name": <span style="color:#F2994A">"consultar_banco"</span>,<br>&#160;&#160;"input": {<br>&#160;&#160;&#160;&#160;"sql": "<span style="color:#7FA7F5">SELECT</span> COUNT(*)<br>&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#7FA7F5">FROM</span> chamados<br>&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#7FA7F5">WHERE</span> status = 'aberto'<br>&#160;&#160;&#160;&#160;&#160;&#160;<span style="color:#7FA7F5">AND</span> criado_em &gt;= current_date - 7"<br>&#160;&#160;}<br>}</p>
+</div>
+</div>
+<div style="width:640px; display:flex; flex-direction:column; gap:12px">
+<div style="display:flex; align-items:center; gap:20px; background:#FBFAF6; border:1px solid #DEDAD0; border-radius:16px; padding:16px 24px"><p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; font-weight:600; color:#F4F2EC; background:#A2520F; padding:4px 12px; border-radius:8px">1</p><p style="font-size:32px; line-height:1.4">Usuário pergunta em linguagem natural</p></div>
+<div style="display:flex; align-items:center; gap:20px; background:#FBFAF6; border:1px solid #DEDAD0; border-radius:16px; padding:16px 24px"><p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; font-weight:600; color:#F4F2EC; background:#A2520F; padding:4px 12px; border-radius:8px">2</p><p style="font-size:32px; line-height:1.4">O LLM devolve um pedido de ferramenta</p></div>
+<div style="display:flex; align-items:center; gap:20px; background:#121826; border-radius:16px; padding:16px 24px"><p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; font-weight:600; color:#121826; background:#F2994A; padding:4px 12px; border-radius:8px">3</p><p style="font-size:32px; line-height:1.4; color:#F4F2EC">Seu código valida e executa (só leitura)</p></div>
+<div style="display:flex; align-items:center; gap:20px; background:#FBFAF6; border:1px solid #DEDAD0; border-radius:16px; padding:16px 24px"><p style="font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; font-weight:600; color:#F4F2EC; background:#A2520F; padding:4px 12px; border-radius:8px">4</p><p style="font-size:32px; line-height:1.4">O resultado volta ao LLM, que responde</p></div>
+</div>
+</div>
+<p style="position:absolute; left:128px; bottom:64px; width:1664px; font-family:'JetBrains Mono', 'Courier New', monospace; font-size:24px; color:#5A6070">NN · Exemplo ilustrativo: o formato exato do JSON varia conforme o provedor do modelo</p>
+<aside>[~4 min] Este é o mecanismo por trás de quase todo agente. Pergunta do usuário: "quantos chamados abertos tivemos esta semana?". O modelo não executa nada: ele devolve um pedido estruturado dizendo qual ferramenta quer chamar e com quais argumentos. Quem executa é o seu código, e é aí que mora a engenharia: validar o SQL, rodar com um usuário somente leitura, limitar linhas, registrar logs. O resultado volta ao modelo, que redige a resposta. Destaque o passo 3 como o ponto de controle: se ele for frágil, o agente vira um risco de segurança.</aside>
+</section>
